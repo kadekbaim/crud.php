@@ -1,0 +1,197 @@
+/* =========================
+   Global Style
+========================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ff4d6d;
+}
+
+/* =========================
+   Navbar
+========================= */
+.navbar {
+  background: #000 !important;
+  padding: 15px 30px;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff !important;
+  letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  margin: 0 10px;
+  font-weight: 500;
+  position: relative;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #ff4d6d;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.hero:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero .content {
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  background: #ff4d6d;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #e60044;
+  transform: scale(1.05);
+}
+
+/* Animasi FadeIn */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   Our Collection
+========================= */
+#collection {
+  padding: 80px 0;
+}
+
+#collection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+#collection h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #ff4d6d;
+  display: block;
+  margin: 15px auto 0;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+  border-bottom: 1px solid #ddd;
+  transition: 0.4s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.card .btn-dark {
+  background: #000;
+  border-radius: 50px;
+  padding: 8px 20px;
+  transition: 0.3s;
+}
+
+.card .btn-dark:hover {
+  background: #ff4d6d;
+  transform: scale(1.05);
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #ff4d6d;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+footer a:hover {
+  color: #fff;
+}
